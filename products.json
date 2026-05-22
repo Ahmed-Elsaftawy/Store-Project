@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Minimalist Oak Desk",
+    "price": 349,
+    "company": "ikea",
+    "feature": true,
+    "rating": 4.8
+  },
+  {
+    "name": "Ergonomic Office Chair",
+    "price": 199,
+    "company": "marcos",
+    "feature": true,
+    "rating": 4.7
+  },
+  {
+    "name": "Foldable Bookshelf",
+    "price": 89,
+    "company": "ikea",
+    "feature": false,
+    "rating": 4.3
+  },
+  {
+    "name": "Leather Sofa Set",
+    "price": 1299,
+    "company": "caressa",
+    "feature": true,
+    "rating": 4.9
+  },
+  {
+    "name": "Bamboo Bedside Table",
+    "price": 74,
+    "company": "liddy",
+    "feature": false,
+    "rating": 4.2
+  },
+  {
+    "name": "Modern Floor Lamp",
+    "price": 59,
+    "company": "ikea",
+    "feature": false,
+    "rating": 4.1
+  },
+  {
+    "name": "Velvet Accent Chair",
+    "price": 229,
+    "company": "caressa",
+    "feature": true,
+    "rating": 4.6
+  },
+  {
+    "name": "Extendable Dining Table",
+    "price": 499,
+    "company": "marcos",
+    "feature": false,
+    "rating": 4.4
+  },
+  {
+    "name": "Storage Ottoman",
+    "price": 119,
+    "company": "liddy",
+    "feature": false,
+    "rating": 4.0
+  },
+  {
+    "name": "Wall-Mounted TV Unit",
+    "price": 279,
+    "company": "ikea",
+    "feature": true,
+    "rating": 4.7
+  },
+  {
+    "name": "Rattan Lounge Chair",
+    "price": 189,
+    "company": "caressa",
+    "feature": false,
+    "rating": 4.3
+  },
+  {
+    "name": "Solid Wood Wardrobe",
+    "price": 799,
+    "company": "marcos",
+    "feature": true,
+    "rating": 4.8
+  },
+  {
+    "name": "Compact Study Desk",
+    "price": 149,
+    "company": "liddy",
+    "feature": false,
+    "rating": 4.2
+  },
+  {
+    "name": "Glass Coffee Table",
+    "price": 239,
+    "company": "caressa",
+    "feature": true,
+    "rating": 4.5
+  },
+  {
+    "name": "Modular Sectional Sofa",
+    "price": 1799,
+    "company": "marcos",
+    "feature": true,
+    "rating": 4.9
+  },
+  {
+    "name": "Floating Wall Shelves",
+    "price": 45,
+    "company": "ikea",
+    "feature": false,
+    "rating": 4.1
+  },
+  {
+    "name": "Upholstered Bed Frame",
+    "price": 649,
+    "company": "caressa",
+    "feature": true,
+    "rating": 4.6
+  },
+  {
+    "name": "Kitchen Bar Stools Set",
+    "price": 159,
+    "company": "liddy",
+    "feature": false,
+    "rating": 4.3
+  },
+  {
+    "name": "Outdoor Garden Bench",
+    "price": 299,
+    "company": "marcos",
+    "feature": false,
+    "rating": 4.4
+  },
+  {
+    "name": "Kids Bunk Bed",
+    "price": 549,
+    "company": "ikea",
+    "feature": true,
+    "rating": 4.7
+  }
+]
