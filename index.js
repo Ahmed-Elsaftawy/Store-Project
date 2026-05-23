@@ -3,6 +3,7 @@ import express from "express";
 import { log } from "node:console";
 import mongoose from "mongoose";
 import { router } from "./routes/products-route.js";
+import { connectDb } from "./utils/db.js";
 config();
 
 const app = express();
@@ -20,15 +21,9 @@ app.use((error, req, res, next) => {
 
 
 const port = process.env.PORT;
-async function connectDb() {
-    await mongoose.connect(process.env.DB_URI).then(() => {
-        console.log("DataBase is connected");
-    })
 
-}
-//connect to DB
 function start() {
-    connectDb()
+    connectDb(process.env.DB_URI)
     app.listen(port, () => {
         log(`listen from ${port}...`);
 
@@ -37,4 +32,3 @@ function start() {
 
 start();
 
-export { connectDb };
