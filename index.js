@@ -15,7 +15,7 @@ app.use((req, res) => res.status(404).json({ status: "Failed", message: "Not Fou
 //error middelware handler 
 app.use((error, req, res, next) => {
     if (error) {
-        res.status(error.status || 500).json({ status: "Error", message: error.message })
+        res.status(error.statusCode || 500).json({ status: "Error", message: error.message })
     }
 })
 
