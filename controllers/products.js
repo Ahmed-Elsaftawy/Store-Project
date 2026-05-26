@@ -14,14 +14,31 @@ const getProductByName = asyncWrapper(async (req, res, next) => {
     const { sort, fields, limit, skip, page, numercFilters, ...allowedQuery } = req.query
     let allowedQueryValues = Object.keys(allowedQuery)
 
-
-    const sortValue = sort.split(",").join(" ") || "createdAt";
-    const fieldsValue = fields.split(",").join(" ") || "";
+    const queryObj = {}
+    const sortValue = sort ? sort.split(",").join(" ") : "createdAt";
+    const fieldsValue = fields ? fields.split(",").join(" ") : "";
     const limitValue = +limit || 10;
     const pageValue = +page || 1;
     const skipValue = (page - 1) * limit;
+    if (numercFilters) {
+        const operatroMap = {
+            '>': "$gt",
+            '>=': '$gte',
+            '<': '$lt',
+            '<=': '$lte'
+        }
+        const regEx = /\b(<|>|>=|<=)\b/g;
+        let numbercFiltersValue = numercFilters.replace(regEx, (match) => `-${operatroMap[match]}-`);
+        const options = ["price", 'rating'];
+        numbercFiltersValue = numbercFiltersValue.split(",").forEach(item => {
+            let [field, operator, value] = item.split('-');
+            if (options.includes(field)) {
+                queryObj[field] = { [operator]: +value };
+            }
+        });
 
-    const queryObj = {}
+
+    }
     for (const key in allowedQuery) {
         if ((allowedQueryValues.includes(allowedQuery[key]))) {
 
@@ -37,6 +54,7 @@ const getProductByName = asyncWrapper(async (req, res, next) => {
     }
 
 
+    log(queryObj)
     const product = await productModle
         .find(queryObj)
         .sort(sortValue)
