@@ -5,7 +5,8 @@ import { getAllProductsStatic, getProductByName } from "../controllers/products.
 const router = express.Router();
 
 router.route('/')
-    .get(getProductByName, getAllProductsStatic);
+    .get(getProductByName);
+router.route('/static').get(getAllProductsStatic)
 
 
 
